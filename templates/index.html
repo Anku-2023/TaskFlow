@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>TaskFlow</h1>
+        <p>Full-Stack Task Management System</p>
+    </header>
+
+
+    <!-- Dashboard -->
+
+    <section class="dashboard">
+
+        <div class="card">
+            <span>Total Tasks</span>
+            <strong id="total">0</strong>
+        </div>
+
+        <div class="card">
+            <span>Todo</span>
+            <strong id="todo">0</strong>
+        </div>
+
+        <div class="card">
+            <span>In Progress</span>
+            <strong id="progress">0</strong>
+        </div>
+
+        <div class="card">
+            <span>Completed</span>
+            <strong id="completed">0</strong>
+        </div>
+
+    </section>
+
+
+    <!-- Add Task -->
+
+    <section class="form-box">
+
+        <h2>Create Task</h2>
+
+        <input
+            type="text"
+            id="title"
+            placeholder="Task title"
+            maxlength="100"
+        >
+
+        <textarea
+            id="description"
+            placeholder="Task description"
+            maxlength="500"
+        ></textarea>
+
+        <div class="form-row">
+
+            <select id="priority">
+
+                <option value="Low">Low Priority</option>
+
+                <option value="Medium" selected>
+                    Medium Priority
+                </option>
+
+                <option value="High">
+                    High Priority
+                </option>
+
+            </select>
+
+            <button onclick="addTask()">
+                + Add Task
+            </button>
+
+        </div>
+
+        <p id="error"></p>
+
+    </section>
+
+
+    <!-- Filters -->
+
+    <section class="filters">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search tasks..."
+            oninput="displayTasks()"
+        >
+
+        <select id="filterStatus" onchange="displayTasks()">
+
+            <option value="All">All Status</option>
+
+            <option value="Todo">Todo</option>
+
+            <option value="In Progress">
+                In Progress
+            </option>
+
+            <option value="Completed">
+                Completed
+            </option>
+
+        </select>
+
+        <select id="filterPriority" onchange="displayTasks()">
+
+            <option value="All">All Priorities</option>
+
+            <option value="Low">Low</option>
+
+            <option value="Medium">Medium</option>
+
+            <option value="High">High</option>
+
+        </select>
+
+    </section>
+
+
+    <!-- Tasks -->
+
+    <section class="tasks">
+
+        <div class="tasks-header">
+
+            <h2>My Tasks</h2>
+
+            <span id="taskCount">0 tasks</span>
+
+        </div>
+
+        <div id="taskList"></div>
+
+    </section>
+
+</div>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>
