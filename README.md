@@ -6,6 +6,10 @@ Python, Flask, JavaScript, HTML, CSS and SQLite.
 # Render Deployed
 https://taskflow-2bi1.onrender.com/
 
+# Screenshots of taskflow
+<img width="1727" height="807" alt="Screenshot 2026-09-23 103606" src="https://github.com/user-attachments/assets/3282d304-ee30-48a4-a3c2-eb743e8fcae2" />
+<img width="1652" height="898" alt="Screenshot 2026-09-23 103628" src="https://github.com/user-attachments/assets/049d7897-763c-4bef-a807-716e37ccba03" />
+
 ## Features
 
 - Create tasks
